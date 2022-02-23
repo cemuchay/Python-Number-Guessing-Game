@@ -25,5 +25,5 @@ while count < math.log(upper - lower + 1, 2):
     elif guess > x:
         print("\nYou guessed too high, Perhaps a lower Number?", "You have ", round(math.log(upper - lower + 1, 2)) - count, "Number of guesses Remaining")
 
-if count == round(math.log(upper - lower + 1, 2)):
+while count > round(math.log(upper - lower + 1, 2)):
     print("\nYour Chances are up, The correct Number Is", x)
