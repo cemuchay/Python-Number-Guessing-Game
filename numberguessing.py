@@ -1,18 +1,23 @@
 import random
 import math
 
+# Collecting Integer Inputs
 lower = int(input("\nPlease enter lower bound: "))
 upper = int(input("\nPlease enter upper bound: "))
 
+# Generating random Int between bounds
 x = random.randint(lower, upper)
 
 print("\nYou have a maximum of ", round(math.log(upper - lower + 1, 2)), "number of guesses")
 
+# Initializing Count
 count = 0
+ 
  
 while count < round(math.log(upper - lower + 1, 2)):
     count += 1
 
+    # Matching Guesss to Random number
     guess = int(input('Please Guess a Number: '))
 
     if guess == x:
