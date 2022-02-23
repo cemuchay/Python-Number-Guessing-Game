@@ -10,13 +10,13 @@ print("\nYou have a maximum of ", round(math.log(upper - lower + 1, 2)), "number
 
 count = 0
  
-while count < math.log(upper - lower + 1, 2):
+while count < round(math.log(upper - lower + 1, 2)):
     count += 1
 
     guess = int(input('Please Guess a Number: '))
 
     if guess == x:
-        print('\nCongratulations You did it After', count, "Attempt(s)" )
+        print('\nCongratulations You did it After', count, "Attempt(s)" , "\n and", round(math.log(upper - lower + 1, 2)) - count, "Guesses remaining")
         break
 
     elif guess < x:
@@ -25,5 +25,5 @@ while count < math.log(upper - lower + 1, 2):
     elif guess > x:
         print("\nYou guessed too high, Perhaps a lower Number?", "You have ", round(math.log(upper - lower + 1, 2)) - count, "Number of guesses Remaining")
 
-while count > round(math.log(upper - lower + 1, 2)):
-    print("\nYour Chances are up, The correct Number Is", x)
+if count == round(math.log(upper - lower + 1, 2)):
+    print("\nYour Chances are up, The correct Number Is", x )
