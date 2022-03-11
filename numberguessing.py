@@ -5,7 +5,7 @@ import math
 lower = int(input("\nPlease enter lower bound: "))
 upper = int(input("\nPlease enter upper bound: "))
 
-# Generating random Int between bounds
+# Generating pseudo random Int between bounds
 x = random.randint(lower, upper)
 
 print("\nYou have a maximum of ", round(math.log(upper - lower + 1, 2)), "number of guesses")
